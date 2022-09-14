@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}ホーム{% endblock %}
+
+{% block content %}
+
+        <div class="m-4 border bg-white">
+            <ul class="d-flex flex-row">
+                <li class="item_text_li"><a href="{% url 'vector' %}" class="black item_title">ベクトル</a></li>
+                <li class="item_text_li"><p class="item_text">ベクトルの計算をします。</li>
+            </ul>
+        </div>
+        <div class="m-4 border bg-white">
+            <ul class="d-flex flex-row">
+                <li class="item_text_li"><a href="{% url 'BMI' %}" class="black item_title">BMI</a></li>
+                <li class="item_text_li"><p class="item_text">BMIは肥満度を示す体格指数です。</li>
+            </ul>
+        </div>
+{% endblock content %}

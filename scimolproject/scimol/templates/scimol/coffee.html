@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}コーヒーについて{% endblock %}
+
+
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a title="Breadcrumb Example" href="{% url 'index' %}"><i class="fa fa-home"> ホーム</i></a></li>
+            <li class="breadcrumb-item active"><a title="Breadcrumb Example" href="{% url 'vector' %}"><i class="fa fa-home"> コーヒーについて</i></a></li>
+        </ol>
+    </nav>
+    <h1>コーヒーについて</h1>
+    <div class="bg-white coffee_body">
+        <div>
+            <h2>コーヒーとは</h2>
+            <p>アカネ科コーヒーノキ属に属する植物で、普段飲むために使うコーヒー豆はコーヒーノキの種の部分を焙煎したものである。</p>
+            <div class="d-flex">
+                <div>
+                    <img src="../../../static/img/coffeetree.jpg" width="300px">
+                <p style="margin-left:80px">コーヒーノキの実</p>
+                </div>
+                <div class="m-1">
+                    <p>コーヒー豆といえば黒褐色なので、コーヒーの実も黒系を思い浮かべますが、実際は赤色なんですね。</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>コーヒーの種類</h2>
+            <ul style="list-style: circle;margin-left: 30px;">
+                <li>
+                    <h5>アラビカ種(約60%を占める)</h5>
+                    <p>世界で最も使われている品種。ロブスタ種よりも直射日光と寒さに弱くサビ病にも弱いが、バランスの良い風味を持っている。</p>
+                </li>
+                <li>
+                    <h5>ロブスタ種(約40%を占める)</h5>
+                    <p>インスタントなどの工業製品で用いられる。アラビカ種よりも直射日光と寒さに強くサビ病にも強いが、ロブ臭</p>
+                </li>
+                <li>
+                    <h5>リベリカ種(1%に満たない)</h5>
+                    <p>まだまだ研究段階</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock content %}

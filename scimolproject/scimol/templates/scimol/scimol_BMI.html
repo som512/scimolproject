@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}BMI{% endblock %}
+
+
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="m-1 breadcrumb-item active"><a title="Breadcrumb Example" href="{% url 'index' %}"><i class="fa fa-home"> ホーム</i></a></li>
+            <li class="m-1 breadcrumb-item active"><a title="Breadcrumb Example" href="{% url 'BMI' %}"><i class="fa fa-home"> BMI</i></a></li>
+        </ol>
+    </nav>
+    <h1>BMI</h1>
+    <div class="BMI-form-divpare">
+        <div class="BMI-form-divchil">
+            <ul>
+                <li class="d-flex">
+                    <label>身長</label>
+                    <input type="text" id = "user_height">
+                    <label>cm</label>
+                </li>
+                <li class="d-flex">
+                    <label>体重</label>
+                    <input type="text" id= "user_weight">
+                    <label>kg</label>
+                </li>
+                <li>
+                    <button type="button" class="BMI-button" id="button">計算する</button>
+                </li>
+                <li class="bg-white BMI-cal-li">
+                    <div class="BMI-cal-li-div">
+                        <p class="BMI-cal-p1">BMI : </p>
+                        <p class="BMI-cal-p2" id="user_BMI"></p>
+                    </div>
+                    <div class="BMI-cal-li-div">
+                        <p class="BMI-cal-p1">適正体重 : </p>
+                        <p class="BMI-cal-p2" id="user_rightweight"></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> 
+{% endblock content %}
